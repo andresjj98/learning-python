@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Clasificación de Riesgos</title>
+    <link rel="stylesheet" href="static/estilos.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Clasificación de Riesgos</h1>
+    <form id="carFormDropdown" action="/submit_dropdown" method="post">
+        <label for="make">Make:</label>
+        <select id="make" name="make">
+            <option value="0">Alfa-Romero</option>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+            <option value="3">Chevrolet</option>
+            <option value="4">Dodge</option>
+            <option value="5">Honda</option>
+            <option value="6">Isuzu</option>
+            <option value="7">Jaguar</option>
+            <option value="8">Mazda</option>
+            <option value="9">Mercedes-Benz</option>
+            <option value="10">Mercury</option>
+            <option value="11">Mitsubishi</option>
+            <option value="12">Nissan</option>
+            <option value="13">Peugot</option>
+            <option value="14">Plymouth</option>
+            <option value="15">Porsche</option>
+            <option value="16">Renault</option>
+            <option value="17">Saab</option>
+            <option value="18">Subaru</option>
+            <option value="19">Toyota</option>
+            <option value="20">Volkswagen</option>
+            <option value="21">Volvo</option>
+        </select>
+    
+        <label for="fuelType">Fuel Type:</label>
+        <select id="fuelType" name="fuelType">
+            <option value="0">Diesel</option>
+            <option value="1">Gas</option>
+        </select>
+    
+        <label for="aspiration">Aspiration:</label>
+        <select id="aspiration" name="aspiration">
+            <option value="0">Std</option>
+            <option value="1">Turbo</option>
+        </select>
+    
+        <label for="numOfDoors">Number of Doors:</label>
+        <select id="numOfDoors" name="numOfDoors">
+            <option value="0">Four</option>
+            <option value="1">Two</option>
+        </select>
+    
+        <label for="bodyStyle">Body Style:</label>
+        <select id="bodyStyle" name="bodyStyle">
+            <option value="4">Hardtop</option>
+            <option value="3">Wagon</option>
+            <option value="2">Sedan</option>
+            <option value="1">Hatchback</option>
+            <option value="0">Convertible</option>
+        </select>
+    
+        <label for="driveWheels">Drive Wheels:</label>
+        <select id="driveWheels" name="driveWheels">
+            <option value="0">4WD</option>
+            <option value="1">FWD</option>
+            <option value="2">RWD</option>
+        </select>
+    
+        <label for="engineLocation">Engine Location:</label>
+        <select id="engineLocation" name="engineLocation">
+            <option value="0">Front</option>
+            <option value="1">Rear</option>
+        </select>
+    
+        <label for="engineType">Engine Type:</label>
+        <select id="engineType" name="engineType">
+            <option value="0">DOHC</option>
+            <option value="1">DOHCV</option>
+            <option value="2">L</option>
+            <option value="3">OHC</option>
+            <option value="4">OHCF</option>
+            <option value="5">OHCv</option>
+            <option value="6">Rotor</option>
+        </select>
+    
+        <label for="numOfCylinders">Number of Cylinders:</label>
+        <select id="numOfCylinders" name="numOfCylinders">
+            <option value="0">Eight</option>
+            <option value="1">Five</option>
+            <option value="2">Four</option>
+            <option value="3">Six</option>
+            <option value="4">Three</option>
+            <option value="5">Twelve</option>
+            <option value="6">Two</option>
+        </select>
+
+        <label for="normalizedLosses">Normalized Losses:</label>
+        <div class="range-container">
+            <input type="range" id="normalizedLosses" name="normalizedLosses" min="65" max="256">
+            <span class="range-value" id="normalizedLossesValue">65</span>
+        </div>
+    
+        <label for="wheelBase">Wheel Base (86.6 - 120.9):</label>
+        <div class="range-container">
+            <input type="range" id="wheelBase" name="wheelBase" min="86.6" max="120.9">
+            <span class="range-value" id="wheelBaseValue">86.6</span>
+        </div>
+    
+        <label for="length">Length (141.1 - 208.1):</label>
+        <div class="range-container">
+            <input type="range" id="length" name="length" min="141.1" max="208.1">
+            <span class="range-value" id="lengthValue">141.1</span>
+        </div>
+    
+        <label for="width">Width (60.3 - 72.3):</label>
+        <div class="range-container">
+            <input type="range" id="width" name="width" min="60.3" max="72.3">
+            <span class="range-value" id="widthValue">60.3</span>
+        </div>
+    
+        <label for="height">Height (47.8 - 59.8):</label>
+        <div class="range-container">
+            <input type="range" id="height" name="height" min="47.8" max="59.8">
+            <span class="range-value" id="heightValue">47.8</span>
+        </div>
+    
+        <label for="curbWeight">Curb Weight (1488 - 4066):</label>
+        <div class="range-container">
+            <input type="range" id="curbWeight" name="curbWeight" min="1488" max="4066">
+            <span class="range-value" id="curbWeightValue">1488</span>
+        </div>
+    
+        <label for="engineSize">Engine Size (61 - 326):</label>
+        <div class="range-container">
+            <input type="range" id="engineSize" name="engineSize" min="61" max="326">
+            <span class="range-value" id="engineSizeValue">61</span>
+        </div>
+    
+        <label for="compressionRatio">Compression Ratio (7 - 23):</label>
+        <div class="range-container">
+            <input type="range" id="compressionRatio" name="compressionRatio" min="7" max="23">
+            <span class="range-value" id="compressionRatioValue">7</span>
+        </div>
+    
+        <label for="horsepower">Horsepower (48 - 288):</label>
+        <div class="range-container">
+            <input type="range" id="horsepower" name="horsepower" min="48" max="288">
+            <span class="range-value" id="horsepowerValue">48</span>
+        </div>
+    
+        <label for="cityMpg">City MPG (13 - 49):</label>
+        <div class="range-container">
+            <input type="range" id="cityMpg" name="cityMpg" min="13" max="49">
+            <span class="range-value" id="cityMpgValue">13</span>
+        </div>
+    
+        <label for="highwayMpg">Highway MPG (16 - 54):</label>
+        <div class="range-container">
+            <input type="range" id="highwayMpg" name="highwayMpg" min="16" max="54">
+            <span class="range-value" id="highwayMpgValue">16</span>
+        </div>
+    
+        <label for="price">Price (5118 - 45400):</label>
+        <div class="range-container">
+            <input type="range" id="price" name="price" min="5118" max="45400">
+            <span class="range-value" id="priceValue">5118</span>
+        </div>
+    
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        document.querySelectorAll('input[type="range"]').forEach(input => {
+            input.addEventListener('input', function() {
+                document.getElementById(`${this.id}Value`).textContent = this.value;
+            });
+        });
+    </script>
+    </body>
+</html>

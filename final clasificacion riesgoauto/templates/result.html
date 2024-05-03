@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la Clasificación</title>
+    <link rel="stylesheet" href="static/estilos2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado de la Clasificación</h1>
+        <p>El nivel de riesgo del vehiculo proporcionado es:</p>
+        <p class="{% if prediction < 0 %}neg-prediction{% else %}prediction{% endif %}">{{ prediction }}</p>
+        <p>Un valor de +3 indica que el auto es más peligroso, -3 indica que probablemente sea bastante seguro.</p>
+    </div>
+</body>
+</html>
